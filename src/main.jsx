@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Shop from "./components/Shop.jsx";
+import Shop, { shopLoader } from "./components/Shop.jsx";
 import Home from "./Home.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import NotFound from "./components/NotFound.jsx";
@@ -22,6 +22,7 @@ let router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+        loader:shopLoader
       },
       {
         path: "/shop/:productID",
